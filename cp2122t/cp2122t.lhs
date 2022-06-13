@@ -288,30 +288,30 @@ t = Fork (
 \end{code}
 
 \begin{enumerate}
-\item	
+\item   
 Defina como catamorfismo de \LTree's a função |both :: LTree Int -> Int >< Int| tal que
 \begin{quote}
 |(a,b) = both t|
 \end{quote}
 dê,
 \begin{itemize}
-\item	em |a|: o resultado mais favorável à Alice, quando esta é a primeira a jogar,
-	tendo em conta as jogadas do Bob e as suas;
-\item	em |b|: o resultado mais favorável ao Bob, quando este é o primeiro a jogar,
-	tendo em conta as jogadas da Alice e as suas.
+\item   em |a|: o resultado mais favorável à Alice, quando esta é a primeira a jogar,
+    tendo em conta as jogadas do Bob e as suas;
+\item   em |b|: o resultado mais favorável ao Bob, quando este é o primeiro a jogar,
+    tendo em conta as jogadas da Alice e as suas.
 \end{itemize}
 \item
 De seguida, extraia (por recursividade mútua) as funções (recursivas) |alice| e |bob| tais que
 \begin{eqnarray*}
-	|both = split alice bob|
+    |both = split alice bob|
 \end{eqnarray*}
 (Alternativamente, poderá codificar |alice| e |bob| em primeiro lugar e depois
 juntá-las num catamorfismo recorrendo às leis da recursividade mútua.)
 \end{enumerate}
 
 \begin{figure}
-	\centering
-	\includegraphics[width=0.6\textwidth]{cp2122t_media/castor11.png}
+    \centering
+    \includegraphics[width=0.6\textwidth]{cp2122t_media/castor11.png}
 \caption{
    Labirinto de ``Robôs e Pedras Preciosas".
    \label{fig:labirinto}
@@ -331,7 +331,7 @@ sucessivamente (Fig.~\ref{fig:sierp2}).
 
 \begin{figure}[htb]
 \begin{center}
-	\includegraphics[width=0.4\textwidth]{cp2122t_media/sierpinski1.png}
+    \includegraphics[width=0.4\textwidth]{cp2122t_media/sierpinski1.png}
 \end{center}
   \caption{Um triângulo de Sierpinski com profundidade |4|.}
   \label{fig:sierp1}
@@ -339,7 +339,7 @@ sucessivamente (Fig.~\ref{fig:sierp2}).
 
 \begin{figure}[htb]
 \begin{center}
-	\includegraphics[width=0.6\textwidth]{cp2122t_media/sierpinski2.png}
+    \includegraphics[width=0.6\textwidth]{cp2122t_media/sierpinski2.png}
 \end{center}
   \caption{Construção de um triângulo de Sierpinski}
   \label{fig:sierp2}
@@ -680,8 +680,8 @@ em \cite{Ol18}, página \pageref{eq:fokkinga}.}
 
 Para o caso de funções sobre os números naturais (|Nat0|, com functor
 |fF X = 1 + X|) é fácil derivar-se da lei que foi estudada uma
-	\emph{regra de algibeira}
-	\label{pg:regra}
+    \emph{regra de algibeira}
+    \label{pg:regra}
 que se pode ensinar a programadores que não tenham estudado
 \cp{Cálculo de Programas}. Apresenta-se de seguida essa regra, tomando como
 exemplo o cálculo do ciclo-\textsf{for} que implementa a função de Fibonacci,
@@ -701,14 +701,14 @@ fib' = p1 . for loop init where
 \end{code}
 usando as regras seguintes:
 \begin{itemize}
-\item	O corpo do ciclo |loop| terá tantos argumentos quanto o número de funções
+\item   O corpo do ciclo |loop| terá tantos argumentos quanto o número de funções
 mutuamente recursivas.
-\item	Para as variáveis escolhem-se os próprios nomes das funções, pela ordem
+\item   Para as variáveis escolhem-se os próprios nomes das funções, pela ordem
 que se achar conveniente.\footnote{Podem obviamente usar-se outros símbolos,
 mas numa primeira leitura dá jeito usarem-se tais nomes.}
-\item	Para os resultados vão-se buscar as expressões respectivas, retirando
+\item   Para os resultados vão-se buscar as expressões respectivas, retirando
 a variável |n|.
-\item	Em |init| coleccionam-se os resultados dos casos de base das funções,
+\item   Em |init| coleccionam-se os resultados dos casos de base das funções,
 pela mesma ordem.
 \end{itemize}
 Mais um exemplo, envolvendo polinómios do segundo grau $ax^2 + b x + c$ em |Nat0|.
@@ -738,8 +738,8 @@ efeitos especiais em progra\-mação. Por exemplo, a biblioteca \Probability\
 oferece um mónade para abordar problemas de probabilidades. Nesta biblioteca,
 o conceito de distribuição estatística é captado pelo tipo
 \begin{eqnarray}
-	|newtype Dist a = D {unD :: [(a, ProbRep)]}|
-	\label{eq:Dist}
+    |newtype Dist a = D {unD :: [(a, ProbRep)]}|
+    \label{eq:Dist}
 \end{eqnarray}
 em que |ProbRep| é um real de |0| a |1|, equivalente a uma escala de $0$ a
 $100 \%$.
@@ -925,7 +925,7 @@ Logo, segue:
             lcbr(
             q d 0 = 0
             )(
-            q d (n+1) = k' (q d n, (r d n) (c d n))
+            q d (n+1) = k' (q d n, (r d n , c d n))
             )
         )(
             lcbr(
@@ -956,7 +956,7 @@ Ora,
 De:|lcbr(
         q d 0 = 0
         )(
-        q d (n+1) = k' (q d n, (r d n) (c d n))
+        q d (n+1) = k' (q d n, (r d n , c d n))
         )|
 \end{eqnarray*}
 
@@ -965,7 +965,7 @@ Retiramos\:que:
 \end{eqnarray*}
 
 \begin{eqnarray*}
-k'(a,(b,0)) = a+1\\k'(a,(b,c+1)) = a
+k'\:(a,(b,0)) = a+1\\k'\:(a,(b,c+1)) = a
 \end{eqnarray*}
 
 \begin{eqnarray*}
@@ -978,10 +978,10 @@ De:
 \end{eqnarray*}
 
 \begin{eqnarray*}
-Retira-se\:que:\\k1'(a,(b,0)) = 0\\k1'(a,(b,c+1)) = b+1
+Retira-se\:que:\\k1'\:(a,(b,0)) = 0\\k1'\_(a,(b,c+1)) = b+1
 \end{eqnarray*}
 \begin{eqnarray*}
-k2'(a,(b,0)) = d\\k2'(a,(b,c+1)) = c
+k2'\:(a,(b,0)) = d\\k2'\:(a,(b,c+1)) = c
 \end{eqnarray*}
 
 \begin{eqnarray*}
