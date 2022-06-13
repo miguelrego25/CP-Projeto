@@ -913,7 +913,7 @@ Logo, segue:
           split (r d) (c d ) . in = split k1 k2 . F (split (q d) (split (r d) (c d)))
      )|
 %
-\just\equiv{ Definição de in (N0); Functor dos naturais } 
+\just\equiv{ Definição de in |Nat0|; Functor dos naturais } 
         |lcbr(
           q d . [(const 0), (succ ) ]= k . (id + (split (q d) (split (r d) (c d))))
      )(
@@ -960,13 +960,11 @@ De:|lcbr(
         )|
 \end{eqnarray*}
 
-\begin{eqnarray*}
-Retiramos\:que:
-\end{eqnarray*}
-
-\begin{eqnarray*}
-k'\:(a,(b,0)) = a+1\\k'\:(a,(b,c+1)) = a
-\end{eqnarray*}
+\begin{text}
+Retiramos que:\\ \\
+k' (a,(b,0)) = a+1 \\
+k' (a,(b,c+1)) = a
+\end{text}
 
 \begin{eqnarray*}
 De:
@@ -977,16 +975,23 @@ De:
     )|
 \end{eqnarray*}
 
-\begin{eqnarray*}
-Retira-se\:que:\\k1'\:(a,(b,0)) = 0\\k1'\_(a,(b,c+1)) = b+1
-\end{eqnarray*}
-\begin{eqnarray*}
-k2'\:(a,(b,0)) = d\\k2'\:(a,(b,c+1)) = c
-\end{eqnarray*}
+\begin{text}
+Retira-se que:\\ \\
+|k1' (a,(b,0)) = 0|\\
+|k1' (a,(b,c+1)) = b+1 |\\
+|k2' (a,(b,0)) = d |\\
+|k2' (a,(b,c+1)) = c |
+\end{text}
 
-\begin{eqnarray*}
-Por \: definicao \: de \: split, \: |split(k') (split(k1') (k2'))| \: define-se \: como:\\|split(k') (split(k1') (k2'))|\:(q,(r,0))=(q+1,(0,d))\\|split(k') (split(k1') (k2'))|\:(q,\:(r,\:c+1))=(q,(r+1,c))\\Logo\:|split(k') (split(k1') (k2'))|=g\:d
-\end{eqnarray*}
+\begin{text}
+\\
+\par Por definição de split, |split(k') (split(k1') (k2'))|
+define-se como:\\ \\
+ |split(k') (split(k1') (k2')) (q,(r,0)) = (q+1,(0,d))|\\
+ |split(k') (split(k1') (k2')) (q,(r,c+1)) = (q,(r+1,c))|\\
+ Logo |split(k') (split(k1') (k2'))| = g d
+
+\end{text}
 
 %ver se o k2 leva dois acentos
 
