@@ -154,7 +154,7 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-\textbf{Grupo} nr. & 99 (preencher)
+\textbf{Grupo} nr. & 33
 \\\hline
 a97444 & Simão Pedro Batista Caridade Quintela
 \\
