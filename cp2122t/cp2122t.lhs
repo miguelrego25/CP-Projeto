@@ -920,7 +920,7 @@ Logo, segue:
           split (r d) (c d ) . [(const 0), (succ ) ]= split k1 k2 . (id + (split (q d) (split (r d) (c d)))
      )|
 %
-\just\equiv{Fusão +;Reflexão +; eq +; igualdade extensional; def-comp; def-split;def-x}
+\just\equiv{\text{Fusão +; Reflexão +; eq +; igualdade extensional; def-comp; def-split; def-x}}
         |lcbr(
             lcbr(
             q d 0 = 0
@@ -939,7 +939,7 @@ Logo, segue:
 aux\:d = |(cata (split (either (const 0) (k')) (either (const((0,d))) k1')))|
 \just\equiv{Lei da Troca}
 aux\:d = |cata (either (split (const 0) ((const (0,d)))) (split (k') (split (k1') (k2')))|
-\just\equiv{for f i  = |either (const(i)) (f)|; def.split}
+\just\equiv{for f i  = |cata(either (const(i)) (f))|; def.split}
 aux\:d = | for (split (k') (split (k1') (k2'))) ((0, (0,d)))|
 \end{eqnarray*}
 
